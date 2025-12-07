@@ -1,0 +1,109 @@
+
+:root{
+  --primary-start: #00b894;
+  --primary-end: #0984e3;
+  --muted: #6c757d;
+  --card-bg: #ffffff;
+}
+
+/* Body */
+.app-body{
+  background: linear-gradient(180deg, rgba(3,201,169,0.06) 0%, rgba(9,132,227,0.03) 100%);
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Navbar */
+.app-navbar{
+  background: linear-gradient(90deg, var(--primary-start), var(--primary-end));
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.brand-circle{
+  display:inline-grid;
+  place-items:center;
+  width:36px;height:36px;border-radius:10px;
+  background: rgba(255,255,255,0.18);
+  font-weight:700;color:#fff;font-size:0.95rem;
+}
+
+/* Cards */
+.card.balance-card{
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  border: none;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+/* balance amount */
+.balance-amount{
+  font-weight:700;
+  font-size:1.8rem;
+  letter-spacing:0.4px;
+}
+
+/* Quick actions */
+.quick-actions{
+  display:flex;
+  gap:0.75rem;
+  overflow:auto;
+  padding-bottom:0.5rem;
+}
+.quick-actions .action{
+  min-width:88px;
+  background: #fff;
+  color:#222;
+  border-radius:0.9rem;
+  padding:0.6rem;
+  text-align:center;
+  box-shadow: 0 6px 18px rgba(14,30,37,0.06);
+}
+.quick-actions .action i{
+  font-size:1.4rem;
+  color:var(--primary-end);
+}
+
+/* Dashboard layout */
+.dashboard-grid{
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap:1rem;
+}
+@media (max-width: 992px){
+  .dashboard-grid{ grid-template-columns: 1fr; }
+  .quick-actions{ justify-content:flex-start; }
+}
+
+/* Transaction list */
+.transaction-item{
+  display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0.5rem;border-bottom:1px solid #f1f3f5;
+}
+.transaction-item .meta{ color:var(--muted); font-size:0.85rem; }
+
+/* Footer small nav for mobile */
+.app-footer{
+  background: transparent;
+}
+
+/* Utility */
+.btn-primary, .btn-success{
+  border-radius: 0.6rem;
+}
+
+/* Light card for panels */
+.panel{
+  background: var(--card-bg);
+  border-radius:0.8rem;
+  padding:1rem;
+  box-shadow: 0 8px 30px rgba(11,26,35,0.04);
+}
+
+/* Small tweaks for forms */
+.form-control{
+  border-radius: 0.6rem;
+  box-shadow: none;
+  border: 1px solid #e7eef6;
+}
